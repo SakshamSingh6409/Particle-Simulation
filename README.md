@@ -1,1 +1,1 @@
-##Particle Simulation using PYGame
+Particle Simulation using PYGame
