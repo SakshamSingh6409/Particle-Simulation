@@ -33,11 +33,41 @@ def key_P(event):
 
     for i in event:
         if i.type == QUIT:
-            running = False
+            End()
 
         elif i.type == KEYDOWN:
             if i.key == K_ESCAPE:
-                exit()
+                End()
             elif i.key == K_a:
                 player[0] +=5
 
+
+
+def spawn_P():
+    for i in range(P_num):
+        x_t = randint(*range_x)
+        y_t = randint(*range_y)
+        r_t = randint(*range_r)
+        vx_t = randint(*range_vx)
+        vy_t = randint(*range_vy)
+        i = particle(x_t,
+                     y_t,
+                     r_t,
+                     vx_t,
+                     vy_t                 
+                    )
+        c.append(i)
+        x.append(x_t)
+        y.append(y_t)
+        r.append(r_t)
+        vx.append(vx_t)
+        vy.append(vy_t)
+
+def End():
+    print(f"c: {c}")
+    print(f"x: {x}")
+    print(f"y: {y}")
+    print(f"r: {r}")
+    print(f"vx: {vx}")
+    print(f"vy: {vy}")
+    quit()
